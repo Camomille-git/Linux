@@ -1,0 +1,274 @@
+{
+    "workbench.colorTheme": "Remedy - Dark (Straight)",
+    "editor.fontSize": 14,
+    "editor.fontFamily": "'Hack', 'JetBrains Mono', 'Droid Sans Mono', 'monospace',  'Droid Sans Fallback'",
+    "editor.formatOnType": true,
+    "editor.tabSize": 2,
+    "window.zoomLevel": 1,
+    "cSpell.language": "en,fr",
+    "cSpell.ignorePaths": [
+        "**/package-lock.json",
+        "**/node_modules/**",
+        "**/vscode-extension/**",
+        "**/.git/objects/**",
+        ".vscode",
+        "**/*.sty",
+        "**/*.ins",
+        "**/*.aux",
+        "**/*.fls",
+        "**/*.fdb_latexmk",
+        "**/*.glo",
+        "**/*.gls",
+        "**/*.hd",
+        "**/*.idx",
+        "**/*.ilg",
+        "**/*.ind",
+        "**/*.log",
+        "**/*.out",
+        "**/*.ptc",
+        "**/*.toc"
+    ],
+    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.chktex.enabled": true,
+    "latex-workshop.chktex.run": "onType",
+    "latex-workshop.intellisense.package.enabled": true,
+    "[latex]": {
+        "editor.rulers": [
+            80,
+            106
+        ]
+    },
+    "latex-workshop.latex.clean.fileTypes": [
+        "*.aux",
+        "*.bbl",
+        "*.blg",
+        "*.idx",
+        "*.ind",
+        "*.lof",
+        "*.lot",
+        "*.out",
+        "*.toc",
+        "*.acn",
+        "*.acr",
+        "*.alg",
+        "*.glg",
+        "*.glo",
+        "*.gls",
+        "*.fls",
+        "*.log",
+        "*.fdb_latexmk",
+        "*.snm",
+        "*.synctex(busy)",
+        "*.synctex.gz(busy)",
+        "*.nav",
+        "*.ptc"
+    ],
+    "latex-workshop.latexindent.args": [
+        "-c",
+        "%DIR%/",
+        "%TMPFILE%",
+        "-y=defaultIndent: '%INDENT%'",
+        "-m"
+    ],
+    "latex-workshop.languages": [
+        {
+            "id": "tex",
+            "aliases": [
+                "TeX",
+                "tex"
+            ],
+            "extensions": [
+                ".bbx",
+                ".cbx"
+            ],
+            "configuration": "./syntax/syntax.json"
+        },
+        {
+            "id": "doctex",
+            "aliases": [
+                "DocTeX",
+                "doctex"
+            ],
+            "extensions": [
+            ],
+            "configuration": "./syntax/syntax-doctex.json"
+        },
+        {
+            "id": "latex",
+            "aliases": [
+                "LaTeX",
+                "latex"
+            ],
+            "extensions": [
+                ".tex",
+                ".ltx",
+                ".dtx",
+                ".ins",
+                ".sty",
+                ".cls",
+                ".ctx"
+            ],
+            "configuration": "./syntax/syntax.json"
+        },
+        {
+            "id": "bibtex",
+            "aliases": [
+                "BibTeX",
+                "bibtex"
+            ],
+            "extensions": [
+                ".bib"
+            ]
+        },
+        {
+            "id": "bibtex-style",
+            "aliases": [
+                "BibTeX style"
+            ],
+            "extensions": [
+                ".bst"
+            ]
+        },
+        {
+            "id": "latex-expl3",
+            "aliases": [
+                "LaTeX-Expl3"
+            ],
+            "configuration": "./syntax/syntax-expl3.json"
+        },
+        {
+            "id": "pdf",
+            "aliases": [
+                "PDF",
+                "pdf"
+            ],
+            "extensions": [
+                ".pdf"
+            ]
+        },
+        {
+            "id": "jlweave",
+            "aliases": [
+                "Weave.jl"
+            ],
+            "extensions": [
+                ".jnw",
+                ".jtexw"
+            ],
+            "configuration": "./syntax/syntax-weave.json"
+        },
+        {
+            "id": "rsweave",
+            "aliases": [
+                "R Sweave"
+            ],
+            "extensions": [
+                ".rnw",
+                ".Rnw",
+                ".Rtex",
+                ".rtex",
+                ".snw",
+                ".Snw"
+            ],
+            "configuration": "./syntax/syntax-weave.json"
+        },
+        {
+            "id": "cpp_embedded_latex"
+        }
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-f",
+                "-shell-escape",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "-outdir=%OUTDIR%",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "lualatexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-lualatex",
+                "-outdir=%OUTDIR%",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "latexmk_rconly",
+            "command": "latexmk",
+            "args": [
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-shell-escape",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "rnw2tex",
+            "command": "Rscript",
+            "args": [
+                "-e",
+                "knitr::opts_knit$set(concordance = TRUE); knitr::knit('%DOCFILE_EXT%')"
+            ],
+            "env": {}
+        },
+        {
+            "name": "jnw2tex",
+            "command": "julia",
+            "args": [
+                "-e",
+                "using Weave; weave(\"%DOC_EXT%\", doctype=\"tex\")"
+            ],
+            "env": {}
+        },
+        {
+            "name": "jnw2texmintex",
+            "command": "julia",
+            "args": [
+                "-e",
+                "using Weave; weave(\"%DOC_EXT%\", doctype=\"texminted\")"
+            ],
+            "env": {}
+        },
+        {
+            "name": "tectonic",
+            "command": "tectonic",
+            "args": [
+                "--synctex",
+                "--keep-logs",
+                "%DOC%.tex"
+            ],
+            "env": {}
+        }
+    ]
+}
